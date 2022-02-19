@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .contact-input {
+        @apply w-[35%] bg-gradient-to-br from-[#121212b0] to-[#12121285] bg-transparent backdrop-blur-lg rounded-lg p-4 pl-5 outline-[#FF00F761] focus-visible:outline-double outline-2;
+    }
+}

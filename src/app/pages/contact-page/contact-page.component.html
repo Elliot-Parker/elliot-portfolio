@@ -1,0 +1,9 @@
+<form class="flex flex-col items-center justify-center w-full mb-20 overflow-auto gap-10" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <h2 class="text-2xl mb-3">Sinta-se à vontade para me enviar um e-mail 😀</h2>
+    <input class="contact-input" required [(ngModel)]="contactInfo.name" name="name" placeholder="Nome" />
+    <input class="contact-input" required [(ngModel)]="contactInfo.email" name="email" placeholder="Email" type="email" />
+    <textarea class="h-72 contact-input resize-none" required [(ngModel)]="contactInfo.messageBody" name="messageBody" placeholder="Digite sua mensagem..."></textarea>
+    <button class="bg-gradient-to-r from-[#660EFF4D] to-[#FF00F761]
+        hover:bg-[#121212] mb-3 transition-opacity p-2 w-56 rounded-lg font-semibold
+        backdrop-blur-lg disabled:opacity-40 disabled:hover:bg-transparent" [disabled]="contactForm.invalid" type="submit">Enviar</button>
+</form>
