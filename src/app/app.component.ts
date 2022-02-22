@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { faYoutube, faVimeoV, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -16,7 +16,7 @@ import { moveFromRight } from 'ngx-router-animations';
         trigger("moveFromRight", [transition("* => *", useAnimation(moveFromRight))]),
     ]
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
 
     title = 'Elliot Parker';
     youtubeIcon = faYoutube;
@@ -55,6 +55,8 @@ export class AppComponent implements OnInit {
         },
     ]
 
+    @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
+
     constructor(private modalService: DetailsModalService, private sanitizer: DomSanitizer) { }
     ngOnInit(): void
     {
@@ -62,7 +64,12 @@ export class AppComponent implements OnInit {
 
             this.selectedVideo = video;
             this.isDetailsModalOpen = true;
-        })
+        });
+    }
+
+    ngAfterViewInit() {
+        this.videoPlayer.nativeElement.muted = true;
+        this.videoPlayer.nativeElement.play();
     }
 
     sanitizeUrl(url?: string) {
