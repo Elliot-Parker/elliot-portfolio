@@ -11,9 +11,13 @@
                 <a class="font-semibold" routerLink="/">Elliot Parker</a> 
             </div>
           
-            <div class="group text-2xl mt-2 whitespace-nowrap font-light flex flex-row justify-center text-center relative">
-                <a *ngFor="let item of navItems" class="w-36 hover:font-normal hover:border-solid" [routerLink]="item.routerLink">{{item.name}}</a>
-                <span class="absolute top-9 rounded-full left-[4.5rem] transition-transform group-hover:translate-x-[520%] h-[2px] w-7 bg-white"></span>
+            <div class="text-2xl mt-2 whitespace-nowrap font-light flex flex-row justify-center text-center">
+                
+                <span *ngFor="let item of navItems">
+                    <input type="radio" name="navItem" class="" />
+                    <label for="navItem" class="w-36 hover:font-normal hover:border-solid" [routerLink]="item.routerLink">{{item.name}}</label>
+                </span>
+                
             </div>
             
             <div class="flex justify-end">
