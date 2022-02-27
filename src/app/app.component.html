@@ -2,7 +2,7 @@
     <video #videoPlayer class="object-cover object-top fixed top-0 left-0 w-screen h-screen -z-10" loop src="../assets/homebackground.mp4"></video>
     
     <div class="top-0 w-screen h-screen fixed bg-gradient-to-r from-[#7083FF4d] to-[#FF68C34d] -z-10"></div>
-    <div class="top-0 w-screen h-screen fixed bg-[#000000b3] -z-10"></div>
+    <div class="top-0 w-screen h-screen fixed bg-[#000] bg-opacity-[0.85] -z-10"></div>
 
     <div class="mt-12 px-14 w-full">
         <nav class="grid grid-cols-3">
@@ -13,9 +13,14 @@
           
             <div class="text-2xl mt-2 whitespace-nowrap font-light flex flex-row justify-center text-center">
                 
-                <span *ngFor="let item of navItems">
-                    <input type="radio" name="navItem" class="" />
-                    <label for="navItem" class="w-36 hover:font-normal hover:border-solid" [routerLink]="item.routerLink">{{item.name}}</label>
+                <span *ngFor="let item of navItems" class="w-36 flex flex-col">
+                    <input id="{{item.name}}" type="radio" name="navItem" class="hidden peer" [checked]="item.isSelected" />
+
+                    <label for="{{item.name}}" class="transition-colors peer-checked:font-normal
+                     hover:bg-black hover:bg-opacity-30 px-2 py-1 rounded-md hover:cursor-pointer" 
+                     [routerLink]="item.routerLink">{{item.name}}</label>
+
+                    <span class="invisible peer-checked:visible bg-white h-[2px] w-1/4 rounded-xl mt-1 self-center"></span>
                 </span>
                 
             </div>
@@ -24,7 +29,9 @@
                 <div class="flex flex-row mt-2 gap-7">
     
                     <a *ngFor="let item of socialItems" [href]="item.url" target="_blank">
-                        <button class="cursor-pointer rounded-full h-9 w-9 bg-gradient-to-r from-[#ffffff66] to-[#ffffff0d] border-2 border-solid border-[#ffffff99] backdrop-blur-sm">
+                        <button class="cursor-pointer rounded-full h-9 w-9
+                         bg-gradient-to-r from-[#ffffff66] to-[#ffffff0d]
+                         border-2 border-solid border-[#ffffff99] backdrop-blur-sm">
                             <fa-icon [icon]="item.icon"></fa-icon>
                         </button>
                     </a>

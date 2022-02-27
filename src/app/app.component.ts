@@ -7,6 +7,7 @@ import { DetailsModalService } from './services/details-modal.service';
 import { RouterOutlet } from '@angular/router';
 import { transition, trigger, useAnimation } from '@angular/animations';
 import { moveFromRight } from 'ngx-router-animations';
+import { NavigationItemModel } from './models/navigationItemModel';
 
 @Component({
     selector: 'app-root',
@@ -29,7 +30,8 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     selectedVideo: VideoModel = {};
   
-    navItems = [
+    navItems: NavigationItemModel[] = [
+        
         { name: "Portfólio", routerLink: "/" },
         { name: "Protótipos", routerLink: "/prototypes" },
         { name: "Sobre mim", routerLink: "/about" },
@@ -65,6 +67,8 @@ export class AppComponent implements OnInit, AfterViewInit {
             this.selectedVideo = video;
             this.isDetailsModalOpen = true;
         });
+
+        this.navItems[0].isSelected = true;
     }
 
     ngAfterViewInit() {
