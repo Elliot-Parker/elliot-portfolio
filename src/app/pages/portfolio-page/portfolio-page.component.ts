@@ -9,30 +9,23 @@ export class PortfolioPageComponent  {
 
     portfolioVideos: VideoModel[] = [
         { 
-            name: "Xbox Series X/S Blades Dashboard (Concept)", 
+            name: `Dashboard "Blades" do Xbox 360 reimaginada (Concept)`, 
             imageUrl: "../../../assets/images/xbox.png",
             url: "https://player.vimeo.com/video/683445435?h=3fe34345ed?h=ca61170d05&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
             description: `
-            Como seria se o Xbox Series X/S tivesse o layout da clássica dashboard do Xbox 360 de 2005?
+            Esse foi o desafio que criei ao pensar em como projetar esse concept. Eu tinha dois requisitos: 
+            precisava ficar incrível e deveria ter um aspecto clássico com toque moderno. A produção desse 
+            projeto levou em torno de 5 meses, usando o meu tempo livre para criar cada detalhe e pensar em 
+            como seriam as animações. Também realizei várias pesquisas, buscando referências em tudo que a 
+            Microsoft já havia criado antes com o Xbox. 
             <br/>
             <br/>
-            Esse foi o desafio que criei ao pensar em como projetar esse concept, 
-            eu tinha apenas duas ideias na cabeça, 
-            a primeira era que precisava ficar incrível o projeto e a segunda era que deveria ter um aspecto clássico com toque moderno. 
-            A produção desse projeto levou em torno de 5 meses, usando o meu tempo 
-            livre para criar cada detalhe e pensar em como seriam as animações, 
-            também realizei várias pesquisas, buscando referências em tudo que a 
-            Microsoft já havia criado antes com o Xbox.
-            <br/>
-            <br/>
-            Foi aí que meu amigo Bruno sugeriu a ideia de reimaginar a clássica 
-            dashboard do Xbox 360 de 2005 a <i> <b> "Blades". </i> </b> Focando nesse aspecto o resto 
-            do design fluiu naturalmente, o mais complexo de fato foram as animações 
-            e técnicas que seriam necessárias para executar o projeto, realizei 
-            diversos estudos e pesquisa para compreender a melhor forma de executar 
-            e assim consegui chegar na versão final.`,
-        },
+            Foi aí que meu amigo Bruno me sugeriu a ideia de reimaginar a clássica dashboard "Blades" do 
+            Xbox 360 para os dias atuais. Focando nesse aspecto o resto do design fluiu naturalmente, o mais 
+            complexo de fato foram as animações e técnicas que seriam necessárias para executar o projeto.`,
 
+        },
+        
         { 
             name: "The Watcher (Concept)", 
             imageUrl: "../../../assets/images/theWatcher.png",
@@ -53,10 +46,26 @@ export class PortfolioPageComponent  {
             mas para crescer em minha carreira, e continuar a ser inspirado todos 
             os dias a criar algo diferente, algo novo e quem sabe inspirar alguém. `,
         },
+
+        { 
+            name: "Doctor Who: FLUX - Stranger Things Style", 
+            imageUrl: "../../../assets/images/doctorwhoflux.png",
+            url: "https://player.vimeo.com/video/680672176??h=3fe34345ed?h=ca61170d05&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+            description: `
+            Como seria se Doctor Who: Flux tivesse a abertura no style de Stranger Things?
+            <br/>
+            <br/>
+            Bom, esse é o resultado, nas últimas semanas eu foquei em criar o remake da abertura de Stranger Things, 
+            tentei ao máximo deixar fiel ao original, desde o neon, brilho e a animação a 24fps.
+            <br/>
+            <br/>`
+
+        },
+
         { 
             name: "PS5 Dashboard (Concept)", 
             imageUrl: "../../../assets/images/playstation.png",
-            url: "https://player.vimeo.com/video/513990128?h=cdfcda688b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+            url: "https://player.vimeo.com/video/513990128??h=cdfcda688b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
             description: `
             Videogames fazem parte da minha vida desde a infância, é algo pelo qual 
             sou apaixonado e trabalhar com motion design me permitiu ter essa possibilidade 
@@ -70,12 +79,12 @@ export class PortfolioPageComponent  {
         { 
             name: "Music Player (Concept)", 
             imageUrl: "../../../assets/images/musicPlayer.png",
-            url: "https://player.vimeo.com/video/504469574?h=1d76d70bba&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            url: "https://player.vimeo.com/video/504469574??h=1d76d70bba&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
         },
         { 
             name: "Lady Gaga - Babylon (Lyric Video)", 
             imageUrl: "../../../assets/images/lady-gaga.png" ,
-            url: "https://player.vimeo.com/video/500897302?h=c6c4865b20&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            url: "https://player.vimeo.com/video/500897302??h=c6c4865b20&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
         },
         { 
             name: "Retro Art", 

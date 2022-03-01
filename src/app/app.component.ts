@@ -37,7 +37,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     navItems: NavigationItemModel[] = [
         
         { name: "Portfólio", routerLink: "/" },
-        { name: "Protótipos", routerLink: "/prototypes" },
+        // { name: "Protótipos", routerLink: "/prototypes" },
         { name: "Sobre mim", routerLink: "/about" },
         { name: "Contato", routerLink: "/contact" },
     ];
