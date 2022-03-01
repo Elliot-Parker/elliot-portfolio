@@ -11,7 +11,7 @@ export class PortfolioPageComponent  {
         { 
             name: "Xbox Series X/S Blades Dashboard (Concept)", 
             imageUrl: "../../../assets/images/xbox.png",
-            url: "https://player.vimeo.com/video/661046903?h=ca61170d05&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+            url: "https://player.vimeo.com/video/683445435?h=3fe34345ed?h=ca61170d05&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
             description: `
             Como seria se o Xbox Series X/S tivesse o layout da clássica dashboard do Xbox 360 de 2005?
             <br/>
