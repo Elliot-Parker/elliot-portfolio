@@ -25,7 +25,6 @@ export class PortfolioPageComponent  {
             complexo de fato foram as animações e técnicas que seriam necessárias para executar o projeto.`,
 
         },
-        
         { 
             name: "The Watcher (Concept)", 
             imageUrl: "../../../assets/images/theWatcher.png",
@@ -46,7 +45,6 @@ export class PortfolioPageComponent  {
             mas para crescer em minha carreira, e continuar a ser inspirado todos 
             os dias a criar algo diferente, algo novo e quem sabe inspirar alguém. `,
         },
-
         { 
             name: "Doctor Who: FLUX - Stranger Things Style", 
             imageUrl: "../../../assets/images/doctorwhoflux.png",
@@ -56,12 +54,9 @@ export class PortfolioPageComponent  {
             <br/>
             <br/>
             Bom, esse é o resultado, nas últimas semanas eu foquei em criar o remake da abertura de Stranger Things, 
-            tentei ao máximo deixar fiel ao original, desde o neon, brilho e a animação a 24fps.
-            <br/>
-            <br/>`
+            tentei ao máximo deixar fiel ao original, desde o neon, brilho e a animação a 24fps.`,
 
         },
-
         { 
             name: "PS5 Dashboard (Concept)", 
             imageUrl: "../../../assets/images/playstation.png",
@@ -79,17 +74,46 @@ export class PortfolioPageComponent  {
         { 
             name: "Music Player (Concept)", 
             imageUrl: "../../../assets/images/musicPlayer.png",
-            url: "https://player.vimeo.com/video/504469574??h=1d76d70bba&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            url: "https://player.vimeo.com/video/504469574??h=1d76d70bba&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+            description: `
+            Esse é o primeiro concept que desenvolvi, ele nasceu de um processo curioso… O estudo de ondas sonoras… 
+            Foi aí que me veio a ideia de criar esse projeto, um player de música que tinha como destaque as ondas sonoras, 
+            inclusive aproveitei esse conceito em uma das cenas desse comercial. 
+            <br/>
+            <br/>
+            Em relação aos meus projetos mais recentes consigo ver uma grande evolução em meu trabalho como UI/UX designer, 
+            tenho muito orgulho do resultado desse projeto, penso em fazer um remake dele futuramente`,
+
         },
         { 
             name: "Lady Gaga - Babylon (Lyric Video)", 
             imageUrl: "../../../assets/images/lady-gaga.png" ,
-            url: "https://player.vimeo.com/video/500897302??h=c6c4865b20&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            url: "https://player.vimeo.com/video/500897302??h=c6c4865b20&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+            description: `
+            Quando comecei a montar o meu portfólio, eu buscava ideias e inspirações artísticas para criar algo único porém familiar. 
+            Nesse processo escutei pela primeira vez a música Babylon do recém lançado (na época) Chromatica de Lady Gaga, 
+            e foi aí que me veio a inspiração para criar esse projeto.
+            <br/>
+            <br/>
+            A letra da música me trouxe várias ideias e inspirações, e o mais legal disso tudo foi representar alguns desses elementos, 
+            como no trecho 
+            <i>
+                 “We can party like it's B.C. With a pretty 16th-century smile” 
+            </i>Que faz uma referência a Mona Lisa de Leonardo da Vinci (um dos meus quadros favoritos por sinal) e o trecho 
+            <i>
+                “Bodies moving like a sculpture”
+            </i>
+            onde me veio a ideia de introduzir a estátua Vênus de Milo para representar esse momento, com a ideia de pessoas se movendo 
+            como uma escultura. Outro ponto que me fez tomar a decisão artística de criar algo misturando os dois estilos Synthwave e Vaporwave 
+            é a estética da música, com uma vibe oitentista e fashion. Senti que era a estética perfeita para ele, além da sensação que eu 
+            queria transmitir do tempo passando (Vaporwave representando o dia e Synthwave representando a  noite) e assim foi o processo de criação.`,
+
         },
         { 
             name: "Retro Art", 
             imageUrl: "../../../assets/images/retro-art.png" ,
-            url: "https://player.vimeo.com/video/529422361?h=2ba1ecf4f1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            url: "https://player.vimeo.com/video/529422361?h=2ba1ecf4f1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+            description: ` `,
         },
     ]
 
