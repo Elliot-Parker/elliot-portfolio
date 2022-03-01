@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { Injectable, NgModule } from '@angular/core';
+import { BrowserModule, HammerGestureConfig, HammerModule, HAMMER_GESTURE_CONFIG, HAMMER_LOADER } from '@angular/platform-browser';
+import * as Hammer from 'hammerjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,14 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { VideosGridviewComponent } from './components/videos-gridview/videos-gridview.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+@Injectable()
+export class MyHammerConfig extends HammerGestureConfig {
+    override overrides = <any> {
+        pan: { direction: Hammer.DIRECTION_VERTICAL, threshold: 0 },
+        swipe: { direction: Hammer.DIRECTION_VERTICAL, threshold: 0 },
+    }
+}
 
 @NgModule({
     declarations: [
@@ -27,8 +36,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         FontAwesomeModule,
         FormsModule,
         BrowserAnimationsModule,
+        HammerModule
     ],
-    providers: [],
+    providers: [
+        {
+            provide: HAMMER_LOADER,
+            useValue: async () => {
+                return import("hammerjs");
+            }
+        },
+        {
+            provide: HAMMER_GESTURE_CONFIG,
+            useClass: MyHammerConfig
+        }
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

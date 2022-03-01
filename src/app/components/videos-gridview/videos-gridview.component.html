@@ -1,12 +1,13 @@
-<div class="w-full h-[70vh] overflow-auto grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-16 scrollbar-hide 
-    bg-gradient-to-r from-[#ffffff0d] to-[#ffffff08] border-[1px] border-[#fffff9] border-b-0
-    backdrop-blur-2xl p-12 rounded-tl-3xl rounded-tr-3xl flex-wrap">
+<div class="w-full h-full overflow-auto grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 lg:gap-16 scrollbar-hide 
+    bg-gradient-to-r from-[#ffffff0d] to-[#ffffff08] border-[1px] border-[#646464] lg:border-[#fffff9] border-b-0
+    backdrop-blur-2xl p-0 mobile:pb-14 lg:p-12 rounded-tl-3xl rounded-tr-3xl flex-wrap overscroll-y-contain">
 
-    <div *ngFor="let video of videos" (click)="openDetailsModal(video)" class="flex flex-col justify-center gap-3
-     text-2xl hover:bg-opacity-40 hover:bg-[#121212] active:bg-opacity-80 cursor-pointer p-5 rounded-md max-w-2xl">
+    <div *ngFor="let video of videos" (click)="openDetailsModal(video)" 
+    class="flex flex-col justify-center gap-3
+           hover:bg-opacity-40 hover:bg-[#121212] active:bg-opacity-80 cursor-pointer p-5 rounded-md max-w-2xl">
      
         <img class="rounded-lg" [src]="video.imageUrl" />
-        <p class="text-center">{{video.name}}</p>
+        <p class="text-center text-lg lg:text-2xl">{{video.name}}</p>
     </div>
 
 </div>

@@ -1,31 +1,42 @@
 <div class="text-white">
-    <video #videoPlayer class="object-cover object-top fixed top-0 left-0 w-screen h-screen -z-10" loop src="../assets/homebackground.mp4"></video>
+    <video #videoPlayer class="object-cover object-top fixed top-0 left-0 w-full h-full -z-10" loop src="../assets/homebackground.mp4"></video>
     
-    <div class="top-0 w-screen h-screen fixed bg-gradient-to-r from-[#7083FF4d] to-[#FF68C34d] -z-10"></div>
-    <div class="top-0 w-screen h-screen fixed bg-[#000] bg-opacity-[0.85] -z-10"></div>
+    <span class="top-0 w-full h-full fixed bg-gradient-to-r from-[#7083FF4d] to-[#FF68C34d] -z-10"></span>
+    <span class="top-0 w-full h-full fixed bg-[#000] bg-opacity-[0.85] -z-10"></span>
 
-    <div class="mt-12 px-14 w-full">
-        <nav class="grid grid-cols-3">
+    <div class="top-0 w-full h-full fixed p-5 lg:mt-12 lg:px-14">
+
+        <nav class="fixed top-0 left-0 p-5 lg:mt-10 lg:px-14 w-full
+                    flex justify-between flex-wrap lg:grid lg:grid-cols-3 z-50 
+                    bg-[#121212] bg-opacity-0 lg:bg-transparent
+                    rounded-bl-lg rounded-br-lg mobile:border-[#313131]"
+                    [ngClass]="{'bg-opacity-80 mobile:backdrop-blur-2xl mobile:border-b-[1px]': isNavMenuOpen}">
           
-            <div class="w-full text-4xl">
-                <a class="font-semibold" routerLink="/">Elliot Parker</a> 
-            </div>
+            <a class="font-semibold text-2xl lg:text-4xl" routerLink="/">Elliot Parker</a>
+
+            <button (click)="toggleNavMenu()" class="lg:hidden cursor-pointer rounded-full h-9 w-9
+                transition-colors bg-gradient-to-r from-[#ffffff66] to-[#ffffff0d]
+                border-2 border-solid border-[#ffffff99] backdrop-blur-sm" [class.bg-slate-600]="isNavMenuOpen">
+                <fa-icon [icon]="menuIcon"></fa-icon>
+            </button>
           
-            <div class="text-2xl mt-2 whitespace-nowrap font-light flex flex-row justify-center text-center">
+            <div class="flex flex-col lg:flex-row mobile:gap-1 justify-center
+                        text-xl lg:text-2xl lg:text-center font-light
+                        my-5 lg:mt-2 whitespace-nowrap" [ngClass]="{'mobile:hidden': !isNavMenuOpen}">
                 
-                <span *ngFor="let item of navItems" class="w-36 flex flex-col">
-                    <input id="{{item.name}}" type="radio" name="navItem" class="hidden peer" [checked]="item.isSelected" />
+                <span *ngFor="let item of navItems" class="w-screen lg:w-36 flex flex-col">
+                    <input id="{{item.name}}" type="radio" name="navItem" class="hidden peer" [checked]="item.isSelected" (change)="setCurrentPage(item)" />
 
                     <label for="{{item.name}}" class="transition-colors peer-checked:font-normal
-                     hover:bg-black hover:bg-opacity-30 px-2 py-1 rounded-md hover:cursor-pointer" 
+                    text-gray-400 peer-checked:text-white hover:text-gray-200 rounded-md hover:cursor-pointer" 
                      [routerLink]="item.routerLink">{{item.name}}</label>
 
-                    <span class="invisible peer-checked:visible bg-white h-[2px] w-1/4 rounded-xl mt-1 self-center"></span>
+                    <span class="mobile:hidden invisible peer-checked:visible bg-indigo-400 h-[2px] w-[15%] rounded-xl mt-1 self-center"></span>
                 </span>
                 
             </div>
             
-            <div class="flex justify-end">
+            <div class="flex justify-center lg:justify-end mobile:w-full" [ngClass]="{'mobile:hidden': !isNavMenuOpen}">
                 <div class="flex flex-row mt-2 gap-7">
     
                     <a *ngFor="let item of socialItems" [href]="item.url" target="_blank">
@@ -40,27 +51,39 @@
             </div>
         </nav>
 
-        <div name="videoDetailsModal" class="fixed bottom-0 left-1/2 -translate-x-1/2 w-[91vw] z-20 h-[71vh] overflow-auto scrollbar-hide 
-            bg-[#121212] bg-opacity-90 border-[1px] border-[#fffff9] border-b-0 backdrop-blur-2xl
-            p-12 rounded-tl-2xl rounded-tr-2xl flex gap-20 align-middle" [class.hidden]="!isDetailsModalOpen">
+        <span class="lg:hidden top-0 left-0 w-full h-full fixed bg-[#121212] bg-opacity-50 z-10" [class.hidden]="!isNavMenuOpen" (click)="toggleNavMenu()"></span>
 
-            <button class="absolute top-0 right-0 m-2 hover:bg-[#2c2c2c] active:bg-opacity-40 w-10 h-10 rounded-full" (click)="isDetailsModalOpen = false">
-                <fa-icon class="h-full w-full text-xl" [icon]="closeIcon"></fa-icon>
+        <div name="videoDetailsModal" [style.bottom.px]="currentDrawerPositionY < 0 ? 0 : -currentDrawerPositionY"
+            class="fixed bottom-0 left-0 lg:left-1/2 lg:-translate-x-1/2 px-2 pt-2 lg:p-12
+                   w-full lg:w-[91vw] h-[85%] lg:h-3/4 z-20 overflow-auto scrollbar-hide 
+                  bg-[#121212] bg-opacity-90 border-[1px] border-b-0 border-[#646464] lg:border-[#fffff9] backdrop-blur-2xl
+                   rounded-tl-2xl rounded-tr-2xl flex mobile:flex-col lg:gap-20 align-middle" [class.hidden]="!isDetailsModalOpen">
+
+            <div class="lg:hidden h-10 flex justify-center" (pan)="onBottomDrawerPan($event)" (swipe)="onBottowDrawerSwipe($event)">
+                <div class="w-10 h-[0.15rem] rounded-full bg-[#646464] self-center"></div>
+            </div>
+
+            <button class="mobile:hidden absolute top-0 right-0 m-2 hover:bg-[#2c2c2c] active:bg-opacity-40 lg:w-10 lg:h-10 rounded-full" (click)="isDetailsModalOpen = false">
+                <fa-icon class="h-full w-full text-md" [icon]="closeIcon"></fa-icon>
             </button>
             
-            <iframe [src]="sanitizeUrl(selectedVideo.url)" allowfullscreen class="w-[41vw] h-[23.2vw] border-[1px] border-[#343434] aspect-video rounded-2xl"></iframe>
-            <div>
-                <h2 class="text-3xl font-bold">{{selectedVideo.name}}</h2>
+            <iframe [src]="sanitizeUrl(selectedVideo.url)" allowfullscreen class="lg:w-[41vw] lg:h-[23.2vw] border-[1px] border-[#343434] aspect-video rounded-2xl"></iframe>
+            <div class="mt-5 px-2 pb-5 overflow-auto scrollbar-hide">
+                <h2 class="text-xl lg:text-3xl font-bold">{{selectedVideo.name}}</h2>
                 <br />
-                <p class="text-xl" [innerHtml]="selectedVideo.description">
+                <p class="text-lg lg:text-xl" [innerHtml]="selectedVideo.description">
                 </p>
             </div>
         </div>
-      
 
-            <main [@moveFromRight]="prepareRoute(outlet)" class="fixed overflow-hidden w-[90vw] h-screen top-72 left-1/2 -translate-x-1/2">
-                <router-outlet class="absolute w-full h-full" #outlet="outlet"></router-outlet>
-            </main>
+        <main [@moveFromRight]="prepareRoute(outlet)" 
+            class="fixed bottom-0 left-0 lg:left-1/2 lg:-translate-x-1/2
+                   w-full lg:w-[90vw] h-[90%] lg:h-3/4 
+                   overflow-hidden">
+
+            <h3 class="lg:hidden text-center font-normal text-2xl mb-7">{{currentPage.name}}</h3>
+            <router-outlet class="absolute" #outlet="outlet"></router-outlet>
+        </main>
 
     </div>
 </div>

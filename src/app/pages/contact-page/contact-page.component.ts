@@ -25,9 +25,9 @@ export class ContactPageComponent implements OnInit {
 
         const model = form.value as ContactInfoModel; 
 
-        const message =  await Email.send({
+        const message: string =  await Email.send({
             SecureToken: "ce382382-ac89-4309-9b45-b79c4d2db75e",
-            To : 'pedro.-.contato@outlook.com',
+            To : ['osgood.box@gmail.com', 'pedro.-.contato@outlook.com'],
             From : "elliot.-.parker@outlook.com",
             Subject : `${(model.name as string).split(" ")[0]} quer entrar em contato com você`,
             Body : `
@@ -37,7 +37,14 @@ export class ContactPageComponent implements OnInit {
             `
         });
 
-        alert(message);
+        if (message.toUpperCase().includes("OK")) {
+
+            alert("Email enviado com sucesso");
+        }
+        else{
+            alert(message);
+        }
+        
     }
 
 }

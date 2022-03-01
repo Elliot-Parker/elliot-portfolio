@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { faYoutube, faVimeoV, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { VideoModel } from './models/videoModel';
 import { DetailsModalService } from './services/details-modal.service';
 import { RouterOutlet } from '@angular/router';
@@ -25,11 +25,15 @@ export class AppComponent implements OnInit, AfterViewInit {
     instagramIcon = faInstagram;
     twitterIcon = faTwitter;
     closeIcon = faTimes;
+    menuIcon = faBars;
 
+    isNavMenuOpen = false;
     isDetailsModalOpen = false;
 
     selectedVideo: VideoModel = {};
-  
+
+    currentDrawerPositionY = 0;
+    
     navItems: NavigationItemModel[] = [
         
         { name: "Portfólio", routerLink: "/" },
@@ -37,6 +41,8 @@ export class AppComponent implements OnInit, AfterViewInit {
         { name: "Sobre mim", routerLink: "/about" },
         { name: "Contato", routerLink: "/contact" },
     ];
+
+    currentPage = this.navItems[0];
 
     socialItems = [
         {
@@ -74,6 +80,24 @@ export class AppComponent implements OnInit, AfterViewInit {
     ngAfterViewInit() {
         this.videoPlayer.nativeElement.muted = true;
         this.videoPlayer.nativeElement.play();
+    }
+
+    toggleNavMenu() {
+        this.isNavMenuOpen = !this.isNavMenuOpen;
+    }
+
+    setCurrentPage(page: NavigationItemModel) {
+        this.currentPage = page;
+        this.toggleNavMenu();
+    }
+
+    onBottomDrawerPan(event: any) {
+        this.currentDrawerPositionY = event.center.y - 157;
+    }
+
+    onBottowDrawerSwipe(event: any) {
+        this.isDetailsModalOpen = false;
+        this.currentDrawerPositionY = 0;
     }
 
     sanitizeUrl(url?: string) {
