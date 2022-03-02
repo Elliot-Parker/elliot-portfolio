@@ -57,8 +57,9 @@ export class PortfolioPageComponent  {
             tentei ao máximo deixar fiel ao original, desde o neon, brilho e a animação a 24fps.`,
 
         },
+
         { 
-            name: "PS5 Dashboard (Concept)", 
+            name: "Playstation 5 Dashboard (Concept)", 
             imageUrl: "../../../assets/images/playstation.png",
             url: "https://player.vimeo.com/video/513990128??h=cdfcda688b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
             description: `
@@ -71,6 +72,20 @@ export class PortfolioPageComponent  {
             a minha própria versão da Dashboard, foi um grande aprendizado pois 
             aprendi técnicas novas para dar vida a esse projeto.`,
         },
+
+        { 
+            name: "Playstation ONE Dashboard (Concept)", 
+            imageUrl: "../../../assets/images/ps1.png",
+            url: "https://player.vimeo.com/video/683870302?h=cdfcda688b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+            description: `
+            Playstation One, foi o meu primeiro videogame, tenho memórias incriveis e um carinho enorme por ele.
+
+            <br/>
+            <br/>
+            Esse projeto é uma variação do concept do PS5, imaginei como seria se o PS1 tivesse um layout parecido, 
+            utilizei os sons da versão Classic lançada pela Sony em 2018`,
+        },
+
         { 
             name: "Music Player (Concept)", 
             imageUrl: "../../../assets/images/musicPlayer.png",
