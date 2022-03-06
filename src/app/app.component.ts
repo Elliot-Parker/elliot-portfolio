@@ -57,10 +57,10 @@ export class AppComponent implements OnInit, AfterViewInit {
             url: "https://www.instagram.com/elliotparker_br/",
             icon: this.instagramIcon
         },
-        {
-            url: "https://twitter.com/ElliotParker_BR",
-            icon: this.twitterIcon
-        },
+        // {
+        //     url: "https://twitter.com/ElliotParker_BR",
+        //     icon: this.twitterIcon
+        // },
     ]
 
     @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
