@@ -58,24 +58,24 @@ export class PortfolioPageComponent  {
 
         },
 
-        { 
-            name: "Campanha Verão Solstar 2022", 
-            imageUrl: "../../../assets/images/verao.png",
-            url: "https://player.vimeo.com/video/684765808??h=cdfcda688b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-            description: `
-            Video promocional para a campanha 
-            <i>
-            Verão Solstar 2022
-            </i>`,
-        },
+        // { 
+        //     name: "Campanha Verão Solstar 2022", 
+        //     imageUrl: "../../../assets/images/verao.png",
+        //     url: "https://player.vimeo.com/video/684765808??h=cdfcda688b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        //     description: `
+        //     Video promocional para a campanha 
+        //     <i>
+        //     Verão Solstar 2022
+        //     </i>`,
+        // },
 
-        { 
-            name: "Como funciona a energia fotovoltaica? (Solstar)", 
-            imageUrl: "../../../assets/images/fotovoltaica.png",
-            url: "https://player.vimeo.com/video/684763626??h=cdfcda688b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-            description: `
-            Vídeo explicativo sobre o funcionamento da energia fotovoltaica, desenvolvido para a empresa de energia solar Solstar.`,
-        },
+        // { 
+        //     name: "Como funciona a energia fotovoltaica? (Solstar)", 
+        //     imageUrl: "../../../assets/images/fotovoltaica.png",
+        //     url: "https://player.vimeo.com/video/684763626??h=cdfcda688b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        //     description: `
+        //     Vídeo explicativo sobre o funcionamento da energia fotovoltaica, desenvolvido para a empresa de energia solar Solstar.`,
+        // },
 
         { 
             name: "Playstation 5 Dashboard (Concept)", 
