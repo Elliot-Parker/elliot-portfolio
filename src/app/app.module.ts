@@ -1,5 +1,6 @@
 import { Injectable, NgModule } from '@angular/core';
 import { BrowserModule, HammerGestureConfig, HammerModule, HAMMER_GESTURE_CONFIG, HAMMER_LOADER } from '@angular/platform-browser';
+import { HttpClientModule } from "@angular/common/http";
 import * as Hammer from 'hammerjs';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +33,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     ],
     imports: [
         BrowserModule,
+        HttpClientModule,
         AppRoutingModule,
         FontAwesomeModule,
         FormsModule,
