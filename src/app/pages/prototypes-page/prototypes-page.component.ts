@@ -16,7 +16,7 @@ export class PrototypesPageComponent implements OnInit {
             description: `
             Embora o uso de fertilizantes de liberação imediata seja adequado em certos contextos, os fertilizantes de liberação gradual beneficiam 
             a lavoura com vantagens a longo prazo. Entretanto, a combinação dessas diferentes formas de liberação de nutrientes pode ser 
-            a chave para driblar algumas situações vivenciadas na lavoura. Confira no vídeo! 
+            a chave para driblar algumas situações vivenciadas na lavoura.
             </i>`,
         },
 
@@ -40,24 +40,35 @@ export class PrototypesPageComponent implements OnInit {
             </i>`,
         },
 
-        // { 
-        //     name: "Reimaginação: Vinheta Verde Agritech e seus produtos", 
-        //     imageUrl: "../../../assets/images/verdeag.png",
-        //     url: "https://www.youtube.com/embed/FxxartoaLSs",
-        //     description: ` Animação desenvolvida
-        //     </i>`,
-        // },
-
-         { 
-             name: "Campanha Verão Solstar 2022", 
-             imageUrl: "../../../assets/images/verao.png",
-             url: "https://player.vimeo.com/video/684765808??h=cdfcda688b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-             description: `
-            Video promocional para a campanha 
-             <i>
-            Verão Solstar 2022
+        { 
+            name: "Reimaginação: Vinheta Verde Agritech e seus produtos", 
+            imageUrl: "../../../assets/images/verdeag.png",
+            url: "https://player.vimeo.com/video/731775247?h=fd4b9de0d6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+            description: ` 
+            Desenvolvi novas animações para a Logomarca da Verde Agritech e de seus produtos, seguindo a visão da empresa com o conceito da união de dois elos que se unem <i>Tecnologia e Natureza.<i/>
             </i>`,
         },
+
+         { 
+             name: "Enphase chega ao Brasil em parceiria com a Solstar", 
+             imageUrl: "../../../assets/images/enphase.png",
+             url: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6848674123372089344?compact=1",
+             description: `
+             Do vale do sílicio para a sua casa, chega ao Brasil os microinversores da Enphase, empresa Norte Americana de energia fotovoltaica 
+            </i>
+            Foi um prazer enorme participar desse projeto e desenvolver esse comercial comunicando a chegada e ínicio da parceiria com a Enphase.`,
+        },
+
+        { 
+            name: "Campanha Verão Solstar 2022", 
+            imageUrl: "../../../assets/images/verao.png",
+            url: "https://player.vimeo.com/video/684765808??h=cdfcda688b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+            description: `
+           Video promocional para a campanha 
+            <i>
+           Verão Solstar 2022
+           </i>`,
+       },
 
         { 
              name: "Como funciona a energia fotovoltaica? (Solstar)", 
@@ -67,13 +78,13 @@ export class PrototypesPageComponent implements OnInit {
              Vídeo explicativo sobre o funcionamento da energia fotovoltaica, desenvolvido para a empresa de energia solar Solstar.`,
         },
 
-    //     { 
-    //         name: "Animação: Vinheta Solstar", 
-    //         imageUrl: "../../../assets/images/fotovoltaica.png",
-    //         url: "https://player.vimeo.com/video/684763626??h=cdfcda688b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-    //         description: `
-    //         `,
-    //    },
+        { 
+            name: "Animação: Vinheta Solstar", 
+            imageUrl: "../../../assets/images/solstarIntro.png",
+            url: "https://player.vimeo.com/video/731770468?h=17b4483e7f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+            description: `
+            `,
+       },
 
         // { 
         //     name: "Hello", 
